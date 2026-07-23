@@ -1,16 +1,30 @@
-# React + Vite
+#Event Ticket Booking System — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Tailwind frontend for browsing events and booking tickets, talking to a Django REST API backend.
 
-Currently, two official plugins are available:
+Live site: https://ticketbooking-frontend.vercel.app 
+Backend API: https://ticketbooking-backend-wvo2.onrender.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+#Tech Stack
+Framework: React (Vite)
+Styling: Tailwind CSS
+Routing: React Router
+HTTP client: Axios (with JWT-aware interceptors)
+Containerization: Docker
+CI: GitHub Actions
+Deployment: Vercel
 
-## React Compiler
+#Features
+Browse upcoming events (homepage highlights + full searchable/filterable Browse Events page)
+Event detail page 
+JWT-based signup/login
+Organizer flow: create events with one or more ticket types
+Customer flow: book tickets, view booking history and status
+Embedded venue map on event detail pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3Docker
+bash
+docker build -t ticketbooking-frontend .
+docker run -p 5173:5173 ticketbooking-frontend
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Or run alongside the backend via the backend repo's docker-compose.yml (requires both repos cloned as sibling folders).

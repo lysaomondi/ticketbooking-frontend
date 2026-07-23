@@ -34,7 +34,7 @@ function Signup() {
           <option value="organizer">Organizer</option>
         </select>
         {error && <p className="text-red-500 text-sm">{error}</p>}
-        <button className="bg-blue-600 text-white rounded py-2 hover:bg-blue-700">
+        <button className="bg-[#0097a7] text-white rounded py-2 hover:bg-[#007f8c]">
           Create Account
         </button>
       </form>
